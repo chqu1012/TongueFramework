@@ -11,7 +11,7 @@ Included Features:
 ## How it works
 A tongue file describes how the user interface looks like and in the code behind class (controller) the event listener methods can defined as in fxml. 
 
-*Project Structure*  
+### Project Structure  
 ![Project Structure](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0001_project_structure.PNG)  
 For each tongue file this class will be generated:  
 * UI binding model - this class contains all properties defined in the ui
@@ -19,7 +19,7 @@ For each tongue file this class will be generated:
 * Application class
 * Control id list class - all ids of the defined tongue file.
 
-*Tongue file*  
+### Tongue file  
 The tongue file can edit in eclipse editor as TreeViewer with properties and outline support.  
 In the following image a JavaFX form will be rendered with several text fields. Here a several controls used:  
 * FXForm: It is just a TitledPane with the content of GridPane
@@ -28,6 +28,8 @@ In the following image a JavaFX form will be rendered with several text fields. 
 * FXDirectoryTextField: JavaFX Label with TextField and Button to open the DirectoryChooser
 * FXRGBPane: It just a custom control to choose the RGB color.
 * FXValidation: Validtions for the defined control, it is a optionally definition. This validation contains a FXCheck which can be:
+  
+### Validations  
   * FXCheckIsInteger: Check for integer with customized error message, error css style and valid style
   * FXCheckIsDouble: Check for double with customized error message, error css style and valid style
   * FXCheckIsDouble: Check for boolean with customized error message, error css style and valid style
@@ -48,6 +50,8 @@ In the following image a JavaFX form will be rendered with several text fields. 
 ![Tongue File](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0002_tongue_file.PNG)  
 The rendered user interface with validations
 ![Tongue User Interface](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0003_tongue_ui.PNG) 
+
+### Databinding
 
 The generated BindingController class for this example looks like
 ```java
@@ -83,6 +87,9 @@ public abstract class BaseFXFormTextFieldController extends BaseTongueController
 	}
 }
 ```
+
+A custom databinding for two controls via textproperty
+![Databinding](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0004_textproperty_to_label.PNG)  
 
 # Version
 
