@@ -94,11 +94,11 @@ A custom databinding for two controls via textproperty
 ## TableView Example - First steps
 * Define a Tongue file with FXTableView. Each column should has a unique id and property value. If you want a custom cellFactory this can be defined in column property of Table Cell Uri. The class should extends of the TableCell.
 ![Tongue File](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0005_tongue_tableview.PNG)  
-* The TableView will be rendered like
+* The TableView will be rendered like  
 ![TableView UI](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0006_tongue_tableview_ui.PNG)  
-* Generated Property binding class
+* Generated Property binding class  
 ![TableView UI](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0007_tongue_tableview_binding_model.PNG)  
-* Generated controller class
+* Generated controller class  
 ![TableView UI](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0008_tongue_tableview_controller.PNG)  
 
 # Version
