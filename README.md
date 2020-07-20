@@ -11,7 +11,7 @@ Included Features:
 ## How it works
 A tongue file describes how the user interface looks like and in the code behind class (controller) the event listener methods can defined as in fxml. 
 
-Project Structure  
+*Project Structure*  
 ![Project Structure](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0001_project_structure.PNG)  
 For each tongue file this class will be generated:  
 * UI binding model - this class contains all properties defined in the ui
@@ -19,6 +19,11 @@ For each tongue file this class will be generated:
 * Application class
 * Control id list class - all ids of the defined tongue file.
 
+*Tongue file*  
+The tongue file can edit in eclipse editor as TreeViewer with properties and outline support.
+![Tongue File](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0002_tongue_file.PNG)  
+The rendered user interface with validations
+![Tongue User Interface](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0003_tongue_ui.PNG) 
 
 # Version
 
