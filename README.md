@@ -11,9 +11,9 @@ Included Features:
 ## How it works
 A tongue file describes how the user interface looks like and in the code behind class (controller) the event listener methods can defined as in fxml. 
 
-Project Structure
-![Project Structure](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0001_project_structure.PNG)
-For several tongue file:
+Project Structure  
+![Project Structure](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0001_project_structure.PNG)  
+For each tongue file this class will be generated:  
 * UI binding model - this class contains all properties defined in the ui
 * Controller class - this class bind the ui binding model with the user interface, further the event listeners can be handled in here.
 * Application class
