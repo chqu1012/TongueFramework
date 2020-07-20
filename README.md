@@ -27,23 +27,23 @@ In the following image a JavaFX form will be rendered with several text fields. 
 * FXFormFileText: JavaFX Label with TextField and Button to open the FileChooser
 * FXDirectoryTextField: JavaFX Label with TextField and Button to open the DirectoryChooser
 * FXRGBPane: It just a custom control to choose the RGB color.
-* FXValidation: Validtions for the defined control, it is a optionally definition. This validation contains a FXCheck which can be:  
-  ** FXCheckIsInteger: Check for integer with customized error message, error css style and valid style
-  ** FXCheckIsDouble: Check for double with customized error message, error css style and valid style
-  ** FXCheckIsDouble: Check for boolean with customized error message, error css style and valid style
-  ** FXCheckIsEmail: Check for email with customized error message, error css style and valid style
-  ** FXCheckIsUrl: Check for url with customized error message, error css style and valid style
-  ** FXCheckIsEmtpy: Check is selected control empty (currently works only for FXLabel and FXTextField)
-  ** FXCheckIsNotEmtpy: Check is selected control not empty (currently works only for FXLabel and FXTextField)
-  ** FXCheckContains: Check for contains in string with customized error message, error css style and valid style
-  ** FXCheckGreater: Not implemented yet
-  ** FXCheckGreaterThanEquals: Not implemented yet
-  ** FXCheckLess: Not implemented yet
-  ** FXCheckLessThanEquals: Not implemented yet
-  ** FXCheckLessNot: Not implemented yet
-  ** FXCheckLessIsNull: Not implemented yet
-  ** FXCheckLessIsNotNull: Not implemented yet
-  ** FXCheckPattern: Check for the given pattern (regular expression), e.g. postal, address or mobile numbers
+* FXValidation: Validtions for the defined control, it is a optionally definition. This validation contains a FXCheck which can be:
+  * FXCheckIsInteger: Check for integer with customized error message, error css style and valid style
+  * FXCheckIsDouble: Check for double with customized error message, error css style and valid style
+  * FXCheckIsDouble: Check for boolean with customized error message, error css style and valid style
+  * FXCheckIsEmail: Check for email with customized error message, error css style and valid style
+  * FXCheckIsUrl: Check for url with customized error message, error css style and valid style
+  * FXCheckIsEmtpy: Check is selected control empty (currently works only for FXLabel and FXTextField)
+  * FXCheckIsNotEmtpy: Check is selected control not empty (currently works only for FXLabel and FXTextField)
+  * FXCheckContains: Check for contains in string with customized error message, error css style and valid style
+  * FXCheckGreater: Not implemented yet
+  * FXCheckGreaterThanEquals: Not implemented yet
+  * FXCheckLess: Not implemented yet
+  * FXCheckLessThanEquals: Not implemented yet
+  * FXCheckLessNot: Not implemented yet
+  * FXCheckLessIsNull: Not implemented yet
+  * FXCheckLessIsNotNull: Not implemented yet
+  * FXCheckPattern: Check for the given pattern (regular expression), e.g. postal, address or mobile numbers
 
 ![Tongue File](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0002_tongue_file.PNG)  
 The rendered user interface with validations
