@@ -49,6 +49,38 @@ In the following image a JavaFX form will be rendered with several text fields. 
 The rendered user interface with validations
 ![Tongue User Interface](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0003_tongue_ui.PNG) 
 
+The generated BindingController class for this example looks like
+```java
+public abstract class BaseFXFormTextFieldController extends BaseTongueController<FXFormTextFieldModel>{
+
+	@FXML protected FormTextField formName; 
+	@FXML protected FormTextField formLastname; 
+	@FXML protected FormTextField formAge; 
+	@FXML protected FormTextField formEmail; 
+	@FXML protected FormTextField formWebsiteText; 
+	@FXML protected FormTextField formPhoneText; 
+	@FXML protected FormFileTextField formFileText; 
+	@FXML protected FormDirectoryTextField formDirectorText; 
+	@FXML protected RGBPane rgbPane; 
+	
+	public BaseFXFormTextFieldController() {
+		super(new FXFormTextFieldModel(), new TongueControlRenderer(), "./resources/de/dc/fx/tongue/demo/FXFormTextFields.tongue");
+	}
+	
+	@Override
+	public void initializeDatabinding() {
+		model.formNameProperty().bindBidirectional(formName.getTextField().textProperty());
+		model.formLastnameProperty().bindBidirectional(formLastname.textProperty());
+		model.formAgeProperty().bindBidirectional(formAge.textProperty());
+		model.formEmailProperty().bindBidirectional(formEmail.textProperty());
+		model.formWebsiteTextProperty().bindBidirectional(formWebsiteText.textProperty());
+		model.formPhoneTextProperty().bindBidirectional(formPhoneText.textProperty());
+		model.formFileTextProperty().bindBidirectional(formFileText.textProperty());
+		model.formDirectorTextProperty().bindBidirectional(formDirectorText.textProperty());
+	}
+}
+```
+
 # Version
 
 # ChangeLog
