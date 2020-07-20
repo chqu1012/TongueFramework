@@ -51,6 +51,9 @@ The rendered user interface with validations
 
 The generated BindingController class for this example looks like
 ```java
+/**
+* TONGUE GENERATED BINDING FILE
+*/
 public abstract class BaseFXFormTextFieldController extends BaseTongueController<FXFormTextFieldModel>{
 
 	@FXML protected FormTextField formName; 
