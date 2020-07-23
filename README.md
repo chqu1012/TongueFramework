@@ -101,6 +101,19 @@ A custom databinding for two controls via textproperty
 * Generated controller class  
 ![TableView UI](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0008_tongue_tableview_controller.PNG)  
 
+### Use existing model
+When a model is defined, the user can reuse it in the TableView by parsing the compilation unit into the tongue file. The java class can be open via the FXModel popup menu "Parse Uri Model". 
+![Parse Model Popup](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0009_tableview_action_parse_model.PNG)    
+
+A default type dialog is open to choose the java class
+
+![Parse Model Popup](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0009_tableview_action_choose_type.PNG)  
+
+After a class is chosen, the FXModel will be filled by generated fields with datatypes.
+
+![Parse Model Popup](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0009_tableview_action_generate_fields.PNG)  
+
+
 # Version
 
 # ChangeLog
