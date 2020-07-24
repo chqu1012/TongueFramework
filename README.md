@@ -3,10 +3,18 @@ It is just another javafx renderer with several missed features. This renderer e
 
 Included Features:
 * Generation of Model View Control classes
-* List of fs id class generation
+* List of fx id class generation
 * Directly use of JavaFX controls indeed of reflections (in comparision to fxml)
 * Databinding modelling in the tongue file
 * Validations based on regular expressions
+
+## Benefits
+
+Implementing applications in JavaFX can be very complex. Even though you can create the design using FXML. With FXML you can create a mock design very quickly, but as soon as it becomes complicated forms, it has a negative impact on performance. Tongue Framework creates the control element at runtime directly in comparision to FXML the xml file is read out and instantiated via reflections. With FXML, you cannot simply integrate data binding and validations. Tongue Framework should make it easier for the user to create the boilerplate code by generating all of them.
+
+With this framework, the implementation effort should be reduced. The user interface should only be configured, generated and started.  
+
+To display only one table that can filtered and sorted requires some implementations. Here only the table with the columns and the referenced data model is necessary to display the application. An example follows.
 
 ## How it works
 
