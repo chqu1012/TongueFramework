@@ -9,6 +9,11 @@ Included Features:
 * Validations based on regular expressions
 
 ## How it works
+
+![Tongue Framework Overview](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0000_overview.PNG) 
+
+This framework is divided into three components. The main part is the rendering of the tongue file to any custom user interface. Currently the renderer mainly refers to JavaFX. To handle events, there is generated code. Each tongue file will generate controller, model and model binding classes. The last compoment is about managing the tongue file via a treeviewer.
+
 A tongue file describes how the user interface looks like and in the code behind class (controller) the event listener methods can defined as in fxml. 
 
 ### Project Structure  
