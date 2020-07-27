@@ -110,6 +110,8 @@ A custom databinding for two controls via textproperty
 
 ![](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0004_textproperty_to_label.PNG)  
 
+
+
 ## TableView Example - First steps
 * Define a Tongue file with FXTableView. Each column should has a unique id and property value. If you want a custom cellFactory this can be defined in column property of Table Cell Uri. The class should extends of the TableCell.
 ![Tongue File](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0005_tongue_tableview.PNG)  
