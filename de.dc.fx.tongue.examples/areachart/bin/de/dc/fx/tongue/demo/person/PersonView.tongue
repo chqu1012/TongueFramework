@@ -8,9 +8,9 @@
         <children xsi:type="tongue:FXButton" onMouseClicked="onButtonAddSeries" id="buttonAddSeries" text="Add Series"/>
         <children xsi:type="tongue:FXButton" onMouseClicked="onButtonClearChart" id="buttonClearChart" text="Clear Chart"/>
       </children>
-      <children xsi:type="tongue:FXLineChart" id="chartLine" title="Person LineChart">
-        <xAxis name="Number" datatype="//@layout/@center/@children.1/@model/@fields.3"/>
-        <yAxis name="Category" datatype="//@layout/@center/@children.1/@model/@fields.0"/>
+      <children xsi:type="tongue:FXAreaChart" id="chartArea" title="Person Area Chart">
+        <xAxis name="Average" datatype="//@layout/@center/@children.1/@model/@fields.0"/>
+        <yAxis name="Values" datatype="//@layout/@center/@children.1/@model/@fields.3"/>
         <model uri="de.dc.fx.tongue.demo.person.model" name="Person">
           <fields name="name" datatype="String"/>
           <fields name="familyname" datatype="String"/>
