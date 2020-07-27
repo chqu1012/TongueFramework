@@ -10,7 +10,7 @@
       </children>
       <children xsi:type="tongue:FXLineChart" id="chartLine" title="Person LineChart">
         <xAxis name="Number" datatype="//@layout/@center/@children.1/@model/@fields.3"/>
-        <yAxis name="Category" datatype="//@layout/@center/@children.1/@model/@fields.0"/>
+        <yAxis name="Category" datatype="//@layout/@center/@children.1/@model/@fields.3"/>
         <model uri="de.dc.fx.tongue.demo.person.model" name="Person">
           <fields name="name" datatype="String"/>
           <fields name="familyname" datatype="String"/>

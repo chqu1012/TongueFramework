@@ -29,8 +29,8 @@ public class PersonViewController extends BasePersonViewController{
 				fxSeries.setName("Test "+chartLine.getData().size());
 				for (int i = 0; i < 50; i++) {
 					FXXYData data = FXTongueFactory.eINSTANCE.createFXXYData();
-					data.setX(String.valueOf(i));
-					data.setY(String.valueOf(r.nextInt()));
+					data.setX(i);
+					data.setY(r.nextInt());
 					fxSeries.getInput().add(data);
 				}
 				
