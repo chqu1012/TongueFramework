@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tongue:FXTongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tongue="http://www.frateranatis.org/fx/tongue" packageUri="de.dc.fx.tongue.demo" controllerName="DemoViewController" modelName="DemoViewModel" tonguePath="./resources/de/dc/fx/tongue/demo/demo.tongue">
+  <layout xsi:type="tongue:FXBorderPane" id="paneRoot">
+    <styles property="-fx-base" value="#3f474f"/>
+    <center xsi:type="tongue:FXSplitPane" id="splitPaneCenter">
+      <children xsi:type="tongue:FXAreaChart" id="chartArea" title="Overview">
+        <xAxis name="stars" datatype="//@layout/@center/@children.1/@children.0/@model/@fields.4"/>
+        <yAxis name="values" datatype="//@layout/@center/@children.1/@children.0/@model/@fields.4"/>
+      </children>
+      <children xsi:type="tongue:FXSplitPane" isHorizontal="false">
+        <children xsi:type="tongue:FXTableView" id="tableViewRegistration">
+          <model uri="de.dc.fx.tongue.demo.model" name="Registration">
+            <fields name="username" datatype="String"/>
+            <fields name="name" datatype="String"/>
+            <fields name="familyname" datatype="String"/>
+            <fields name="email" datatype="String"/>
+            <fields name="stars" datatype="int"/>
+          </model>
+          <columns id="columnUsername" text="Username" width="160" propertyValue="username" field="//@layout/@center/@children.1/@children.0/@model/@fields.0"/>
+          <columns id="columnName" text="Name" width="140" propertyValue="name" field="//@layout/@center/@children.1/@children.0/@model/@fields.1"/>
+          <columns id="columnFamilyname" text="Familyname" width="140" propertyValue="familyname" field="//@layout/@center/@children.1/@children.0/@model/@fields.2"/>
+          <columns id="columnEmail" text="Email" width="160" propertyValue="email" field="//@layout/@center/@children.1/@children.0/@model/@fields.3"/>
+          <columns id="columnStars" text="Stars" propertyValue="stars" field="//@layout/@center/@children.1/@children.0/@model/@fields.4"/>
+        </children>
+        <children xsi:type="tongue:FXForm" id="formTableViewRegistration">
+          <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextUsernameKeyReleased" id="textFieldUsername" text="Username"/>
+          <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextNameKeyReleased" id="textFieldName" text="Name"/>
+          <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextFamilynameKeyReleased" id="textFieldFamilyname" text="Familyname"/>
+          <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextEmailKeyReleased" id="textFieldEmail" text="Email"/>
+          <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextStarsKeyReleased" id="textFieldStars" text="Stars"/>
+          <controls xsi:type="tongue:FXButton" onAction="onButtonCreateRegistrationAction" id="buttonCreateRegistration" text="Create Registration">
+            <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.5" function="When">
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.3" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.2" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.1" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.4" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.0" function="IsEmpty"/>
+              </locgialBinding>
+            </bindings>
+          </controls>
+        </children>
+      </children>
+    </center>
+  </layout>
+  <validations id="validatorUsernameNotEmpty" name="validatorUsernameNotEmpty" control="//@layout/@center/@children.1/@children.1/@controls.0">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorNameNotEmpty" name="validatorNameNotEmpty" control="//@layout/@center/@children.1/@children.1/@controls.1">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorFamilynameNotEmpty" name="validatorFamilynameNotEmpty" control="//@layout/@center/@children.1/@children.1/@controls.2">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorEmailNotEmpty" name="validatorEmailNotEmpty" control="//@layout/@center/@children.1/@children.1/@controls.3">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorStarsNotEmpty" name="validatorStarsNotEmpty" control="//@layout/@center/@children.1/@children.1/@controls.4">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+</tongue:FXTongue>
