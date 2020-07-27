@@ -14,6 +14,7 @@ public class DemoViewControllerIDs {
 	public static final String textFieldEmail = "textFieldEmail";
 	public static final String textFieldStars = "textFieldStars";
 	public static final String buttonCreateRegistration = "buttonCreateRegistration";
+	public static final String buttonClearAll = "buttonClearAll";
 	
 	// Validator ids
 	public static final String validatorUsernameNotEmpty = "validatorUsernameNotEmpty";

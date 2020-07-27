@@ -7,6 +7,7 @@ import de.dc.fx.tonque.core.control.*;
 import de.dc.fx.tonque.core.control.tableview.filter.*;
 import javafx.fxml.*;
 import javafx.scene.control.*;
+import javafx.event.*;
 import javafx.scene.chart.*;
 import javafx.scene.layout.*;
 import javafx.collections.*;
@@ -26,6 +27,7 @@ public abstract class BaseDemoViewController extends BaseTongueController<DemoVi
 	protected FormTextField textFieldEmail; 
 	protected FormTextField textFieldStars; 
 	protected Button buttonCreateRegistration; 
+	protected Button buttonClearAll; 
 	
 	public BaseDemoViewController() {
 		super(new DemoViewModelBinding(), new TongueControlRenderer(), "./resources/de/dc/fx/tongue/demo/demo.tongue");
@@ -44,10 +46,14 @@ public abstract class BaseDemoViewController extends BaseTongueController<DemoVi
 		textFieldEmail = renderer.findById(DemoViewControllerIDs.textFieldEmail);
 		textFieldStars = renderer.findById(DemoViewControllerIDs.textFieldStars);
 		buttonCreateRegistration = renderer.findById(DemoViewControllerIDs.buttonCreateRegistration);
+		buttonClearAll = renderer.findById(DemoViewControllerIDs.buttonClearAll);
 		
 			BooleanBinding buttonCreateRegistrationDisableBinding = textFieldEmail.textProperty().isEmpty().or(textFieldFamilyname.textProperty().isEmpty()).or(textFieldName.textProperty().isEmpty()).or(textFieldStars.textProperty().isEmpty()).or(textFieldUsername.textProperty().isEmpty());
 			model.buttonCreateRegistrationDisableProperty().bind(buttonCreateRegistrationDisableBinding);
 			buttonCreateRegistration.disableProperty().bind(buttonCreateRegistrationDisableBinding);
+			BooleanBinding buttonClearAllDisableBinding = textFieldEmail.textProperty().isEmpty().or(textFieldFamilyname.textProperty().isEmpty()).or(textFieldName.textProperty().isEmpty()).or(textFieldStars.textProperty().isEmpty()).or(textFieldUsername.textProperty().isEmpty());
+			model.buttonClearAllDisableProperty().bind(buttonClearAllDisableBinding);
+			buttonClearAll.disableProperty().bind(buttonClearAllDisableBinding);
 		
 		model.textFieldUsernameProperty().bindBidirectional(textFieldUsername.textProperty());
 		model.textFieldNameProperty().bindBidirectional(textFieldName.textProperty());
@@ -55,6 +61,7 @@ public abstract class BaseDemoViewController extends BaseTongueController<DemoVi
 		model.textFieldEmailProperty().bindBidirectional(textFieldEmail.textProperty());
 		model.textFieldStarsProperty().bindBidirectional(textFieldStars.textProperty());
 		model.buttonCreateRegistrationProperty().bindBidirectional(buttonCreateRegistration.textProperty());
+		model.buttonClearAllProperty().bindBidirectional(buttonClearAll.textProperty());
 		model.selectedRegistration().bind(tableViewRegistration.getSelectionModel().selectedItemProperty());
 		model.sortedRegistration().comparatorProperty().bind(tableViewRegistration.comparatorProperty());
 		FXTableViewSupport<Registration> tableViewRegistrationSupport = FXTableViewSupport.forTableView(tableViewRegistration).apply();
@@ -62,4 +69,21 @@ public abstract class BaseDemoViewController extends BaseTongueController<DemoVi
 	}
 	
 	public void setMasterDataRegistration(ObservableList<Registration> input) { model.masterDataRegistration().setAll(input); }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public abstract void onButtonCreateRegistrationAction(ActionEvent e);
+	
+	public abstract void onButtonClearAllAction(ActionEvent e);
+	
 }

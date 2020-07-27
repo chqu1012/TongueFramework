@@ -28,8 +28,28 @@
           <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextFamilynameKeyReleased" id="textFieldFamilyname" text="Familyname"/>
           <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextEmailKeyReleased" id="textFieldEmail" text="Email"/>
           <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextStarsKeyReleased" id="textFieldStars" text="Stars"/>
+          <controls xsi:type="tongue:FXLabel"/>
           <controls xsi:type="tongue:FXButton" onAction="onButtonCreateRegistrationAction" id="buttonCreateRegistration" text="Create Registration">
-            <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.5" function="When">
+            <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.6" function="When">
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.3" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.2" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.1" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.4" function="IsEmpty"/>
+              </locgialBinding>
+              <locgialBinding xsi:type="tongue:FXOr">
+                <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.0" function="IsEmpty"/>
+              </locgialBinding>
+            </bindings>
+          </controls>
+          <controls xsi:type="tongue:FXButton" onAction="onButtonClearAllAction" id="buttonClearAll" text="Clear All">
+            <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.7" function="When">
               <locgialBinding xsi:type="tongue:FXOr">
                 <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@children.1/@controls.3" function="IsEmpty"/>
               </locgialBinding>
