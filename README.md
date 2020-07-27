@@ -7,6 +7,8 @@ Included Features:
 * Directly use of JavaFX controls indeed of reflections (in comparision to fxml)
 * Databinding modelling in the tongue file
 * Validations based on regular expressions
+* Direct stylable controls
+* Live Preview of Tongue file
 
 ## Benefits
 
@@ -102,7 +104,11 @@ public abstract class BaseFXFormTextFieldController extends BaseTongueController
 ```
 
 A custom databinding for two controls via textproperty
-![Databinding](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0004_textproperty_to_label.PNG)  
+![Databinding](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0016_tongue_preview.PNG)  
+
+## Tongue File Preview
+
+![](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0004_textproperty_to_label.PNG)  
 
 ## TableView Example - First steps
 * Define a Tongue file with FXTableView. Each column should has a unique id and property value. If you want a custom cellFactory this can be defined in column property of Table Cell Uri. The class should extends of the TableCell.
