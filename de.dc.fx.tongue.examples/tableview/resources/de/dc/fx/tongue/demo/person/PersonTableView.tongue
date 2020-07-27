@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tongue:FXTongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tongue="http://www.frateranatis.org/fx/tongue" packageUri="de.dc.fx.tongue.demo.person" controllerName="PersonTableViewController" modelName="PersonTableViewModel" tonguePath="./resources/de/dc/fx/tongue/demo/person/PersonTableView.tongue">
+  <layout xsi:type="tongue:FXBorderPane" id="paneRoot">
+    <left xsi:type="tongue:FXSplitPane">
+      <children xsi:type="tongue:FXTableView" id="tableViewPerson" onSelectionChanged="">
+        <columns id="columnName" text="Name" propertyValue="name" field="//@layout/@left/@children.0/@model/@fields.0"/>
+        <columns id="columnFamilyname" text="Familyname" propertyValue="familyname" field="//@layout/@left/@children.0/@model/@fields.1"/>
+        <columns id="columnIsMan" text="IsMan" propertyValue="isMan" field="//@layout/@left/@children.0/@model/@fields.2"/>
+        <columns id="columnAge" text="Age" propertyValue="age" field="//@layout/@left/@children.0/@model/@fields.3"/>
+        <model uri="de.dc.fx.tongue.demo.model" name="Person">
+          <fields name="name" datatype="String"/>
+          <fields name="familyname" datatype="String"/>
+          <fields name="isMan" datatype="boolean"/>
+          <fields name="age" datatype="int"/>
+          <fields name="person" datatype="Person"/>
+        </model>
+      </children>
+      <children xsi:type="tongue:FXForm" id="formTableViewPerson" columnNums="1">
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextNameKeyReleased" id="textFieldName" text="Name"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextFamilynameKeyReleased" id="textFieldFamilyname" text="Familyname"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextIsManKeyReleased" id="textFieldIsMan" text="IsMan"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextAgeKeyReleased" id="textFieldAge" text="Age"/>
+        <controls xsi:type="tongue:FXButton" onAction="onButtonCreateAction" id="buttonCreate" text="Create">
+          <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@left/@children.1/@controls.4" function="When">
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.3" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.1" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.2" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.0" function="IsEmpty"/>
+            </locgialBinding>
+          </bindings>
+          <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@left/@children.1/@controls.4" field="visible">
+            <locgialBinding xsi:type="tongue:FXAnd">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.3" function="IsNotEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXAnd">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@left/@children.1/@controls.1" function="IsNotEmpty"/>
+            </locgialBinding>
+          </bindings>
+        </controls>
+        <controls xsi:type="tongue:FXFormComboBox" id="comboBoxGender" text="Gender"/>
+      </children>
+    </left>
+  </layout>
+  <validations id="validatorNameNotEmpty" name="validatorNameNotEmpty" control="//@layout/@left/@children.1/@controls.0">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorFamilynameNotEmpty" name="validatorFamilynameNotEmpty" control="//@layout/@left/@children.1/@controls.1">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorIsManNotEmpty" name="validatorIsManNotEmpty" control="//@layout/@left/@children.1/@controls.2">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorAgeNotEmpty" name="validatorAgeNotEmpty" control="//@layout/@left/@children.1/@controls.3">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorAgeIsNumeric" name="validatorAgeIsNumeric" control="//@layout/@left/@children.1/@controls.3">
+    <check xsi:type="tongue:FXCheckIsInteger"/>
+  </validations>
+</tongue:FXTongue>
