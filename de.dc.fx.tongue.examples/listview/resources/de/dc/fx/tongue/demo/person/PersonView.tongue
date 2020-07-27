@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tongue:FXTongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tongue="http://www.frateranatis.org/fx/tongue" packageUri="de.dc.fx.tongue.demo.person" controllerName="PersonViewController" modelName="PersonViewModel" tonguePath="./resources/de/dc/fx/tongue/demo/person/PersonView.tongue">
+  <layout xsi:type="tongue:FXBorderPane" id="paneRoot">
+    <center xsi:type="tongue:FXSplitPane" id="splitPaneRoot">
+      <children xsi:type="tongue:FXListView" id="listViewPerson">
+        <model uri="de.dc.fx.tongue.demo.model" name="Person">
+          <fields name="name" datatype="String"/>
+          <fields name="familyname" datatype="String"/>
+          <fields name="isMan" datatype="boolean"/>
+          <fields name="age" datatype="int"/>
+        </model>
+      </children>
+      <children xsi:type="tongue:FXForm" id="formTableViewPerson" columnNums="1">
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextNameKeyReleased" id="textFieldName" text="Name"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextFamilynameKeyReleased" id="textFieldFamilyname" text="Familyname"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextIsManKeyReleased" id="textFieldIsMan" text="IsMan"/>
+        <controls xsi:type="tongue:FXFormTextField" onKeyReleased="onTextAgeKeyReleased" id="textFieldAge" text="Age"/>
+        <controls xsi:type="tongue:FXButton" onAction="onButtonCreateAction" id="buttonCreate" text="Create">
+          <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@controls.4" function="When">
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.3" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.1" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.2" function="IsEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXOr">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.0" function="IsEmpty"/>
+            </locgialBinding>
+          </bindings>
+          <bindings xsi:type="tongue:FXFunctionBooleanProperty" objectToBind="//@layout/@center/@children.1/@controls.4" field="visible">
+            <locgialBinding xsi:type="tongue:FXAnd">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.3" function="IsNotEmpty"/>
+            </locgialBinding>
+            <locgialBinding xsi:type="tongue:FXAnd">
+              <binding xsi:type="tongue:FXFunctionStringProperty" objectToBind="//@layout/@center/@children.1/@controls.1" function="IsNotEmpty"/>
+            </locgialBinding>
+          </bindings>
+        </controls>
+      </children>
+    </center>
+  </layout>
+  <validations id="validatorNameNotEmpty" name="validatorNameNotEmpty" control="//@layout/@center/@children.1/@controls.0">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorFamilynameNotEmpty" name="validatorFamilynameNotEmpty" control="//@layout/@center/@children.1/@controls.1">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorIsManNotEmpty" name="validatorIsManNotEmpty" control="//@layout/@center/@children.1/@controls.2">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorAgeNotEmpty" name="validatorAgeNotEmpty" control="//@layout/@center/@children.1/@controls.3">
+    <check xsi:type="tongue:FXCheckIsNotEmtpy"/>
+  </validations>
+  <validations id="validatorAgeIsNumeric" name="validatorAgeIsNumeric" control="//@layout/@center/@children.1/@controls.3">
+    <check xsi:type="tongue:FXCheckIsInteger"/>
+  </validations>
+</tongue:FXTongue>
