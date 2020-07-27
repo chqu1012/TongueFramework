@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tongue:FXTongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tongue="http://www.frateranatis.org/fx/tongue" packageUri="de.dc.fx.tongue.demo.person" controllerName="PersonViewController" modelName="PersonViewModel" tonguePath="./resources/de/dc/fx/tongue/demo/person/PersonView.tongue">
+  <layout xsi:type="tongue:FXBorderPane" id="paneRoot">
+    <center xsi:type="tongue:FXVBox" id="hboxChart">
+      <children xsi:type="tongue:FXHBox">
+        <children xsi:type="tongue:FXLabel" text="Count of Series"/>
+        <children xsi:type="tongue:FXTextField" id="textCountOfSeries" text="1"/>
+        <children xsi:type="tongue:FXButton" onMouseClicked="onButtonAddSeries" id="buttonAddSeries" text="Add Series"/>
+        <children xsi:type="tongue:FXButton" onMouseClicked="onButtonClearChart" id="buttonClearChart" text="Clear Chart"/>
+      </children>
+      <children xsi:type="tongue:FXLineChart" id="chartLine" title="Person LineChart">
+        <xAxis name="Number" datatype="//@layout/@center/@children.1/@model/@fields.3"/>
+        <yAxis name="Category" datatype="//@layout/@center/@children.1/@model/@fields.0"/>
+        <model uri="de.dc.fx.tongue.demo.person.model" name="Person">
+          <fields name="name" datatype="String"/>
+          <fields name="familyname" datatype="String"/>
+          <fields name="isMan" datatype="boolean"/>
+          <fields name="age" datatype="int"/>
+          <fields name="person" datatype="Person"/>
+        </model>
+      </children>
+    </center>
+  </layout>
+</tongue:FXTongue>

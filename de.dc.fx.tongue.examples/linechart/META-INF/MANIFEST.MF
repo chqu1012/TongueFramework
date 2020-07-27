@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Linechart
+Bundle-SymbolicName: linechart
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: linechart
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0",
+ de.dc.fx.tonque.core;bundle-version="1.0.2",
+ de.dc.fx.tongue;bundle-version="0.1.0"
