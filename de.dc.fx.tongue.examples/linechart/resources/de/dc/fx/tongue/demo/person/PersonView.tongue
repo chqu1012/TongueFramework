@@ -16,7 +16,6 @@
           <fields name="familyname" datatype="String"/>
           <fields name="isMan" datatype="boolean"/>
           <fields name="age" datatype="int"/>
-          <fields name="person" datatype="Person"/>
         </model>
       </children>
     </center>
