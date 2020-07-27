@@ -1,10 +1,9 @@
 package de.dc.fx.tongue.demo.person.controller;
 	
-import de.dc.fx.tongue.demo.person.model.*;
-import javafx.event.*;
-import javafx.scene.control.*;
-import javafx.scene.input.*;
-import javafx.scene.layout.*;
+import de.dc.fx.tongue.demo.person.model.Person;
+import de.dc.fx.tongue.demo.person.model.PersonViewControllerIDs;
+import javafx.event.ActionEvent;
+import javafx.scene.input.KeyEvent;
 public class PersonViewController extends BasePersonViewController{
 
 	public void onTextNameKeyReleased(KeyEvent e) {

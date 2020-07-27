@@ -2,7 +2,7 @@
 <tongue:FXTongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tongue="http://www.frateranatis.org/fx/tongue" packageUri="de.dc.fx.tongue.demo.person" controllerName="PersonViewController" modelName="PersonViewModel" tonguePath="./resources/de/dc/fx/tongue/demo/person/PersonView.tongue">
   <layout xsi:type="tongue:FXBorderPane" id="paneRoot">
     <center xsi:type="tongue:FXSplitPane" id="splitPaneRoot">
-      <children xsi:type="tongue:FXListView" id="listViewPerson">
+      <children xsi:type="tongue:FXListView" id="listViewPerson" cellFactoryUri="de.dc.fx.tongue.demo.person.cell.PersonListCell">
         <model uri="de.dc.fx.tongue.demo.model" name="Person">
           <fields name="name" datatype="String"/>
           <fields name="familyname" datatype="String"/>
