@@ -9,6 +9,7 @@ Included Features:
 * Validations based on regular expressions
 * Direct stylable controls
 * Live Preview of Tongue file
+* Addon: Spongue Framework
 
 ## Benefits
 
@@ -142,6 +143,12 @@ When a FXTableView has a FXModel, each columns can create by the fields autoamti
 
 ![Generate Columns](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0010_tableview_action_generate_columns.PNG)  
 
+# Spongue Framework
+Spongue Framework is an addon for the Tongue Framework. It use the Tongue dialect to generate several components for the Spring Boot / Data:
+* Entities
+* Repositories
+* Services
+* Rest Services
 
 # Version
 

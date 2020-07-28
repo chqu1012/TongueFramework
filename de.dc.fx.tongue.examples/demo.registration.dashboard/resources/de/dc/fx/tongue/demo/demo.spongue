@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sponge:FXSpongue xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sponge="http://www.frateranatis.org/fx/spongue" packagePath="de.dc.fx.tongue.demo">
+  <models name="RegistrationDB">
+    <attributes name="username" datatype="String"/>
+    <attributes name="name" datatype="String"/>
+    <attributes name="familyname" datatype="String"/>
+    <attributes name="email" datatype="String"/>
+  </models>
+  <reusedModels href="file:/C:/Development/Repository/TongueFramework/de.dc.fx.tongue.examples/demo.registration.dashboard/resources/de/dc/fx/tongue/demo/demo.tongue#//@layout/@center/@children.1/@children.0/@model"/>
+</sponge:FXSpongue>
