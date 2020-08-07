@@ -9,6 +9,7 @@ Included Features:
 * Validations based on regular expressions
 * Direct stylable controls
 * Live Preview of Tongue file
+* Scene Editor with controls, layouts, validations, styles and databinding
 * Addon: Spongue Framework
 
 ## Benefits
@@ -111,7 +112,9 @@ A custom databinding for two controls via textproperty
 
 ![](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0004_textproperty_to_label.PNG)  
 
+## Tongue Scene Editor
 
+![](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0018_graph_editor.PNG)  
 
 ## TableView Example - First steps
 * Define a Tongue file with FXTableView. Each column should has a unique id and property value. If you want a custom cellFactory this can be defined in column property of Table Cell Uri. The class should extends of the TableCell.
