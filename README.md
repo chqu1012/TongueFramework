@@ -114,6 +114,8 @@ A custom databinding for two controls via textproperty
 
 ## Tongue Scene Editor
 
+For users which not use Eclipse, there is an alternative Scene Editor to modelling the whole user interface with styling, binding, validations, code generation and project generation.
+
 ![](https://github.com/chqu1012/TongueFramework/blob/master/de.dc.fx.tongue.build/images/0018_graph_editor.PNG)  
 
 ## TableView Example - First steps
